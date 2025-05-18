@@ -10,6 +10,8 @@ const playerScore = document.getElementById('player-score')
 let cpuCurrentScore = 0
 let playerCurrentScore = 0
 
+drawCardBtn.disabled = true
+
 /*
 Following can be written as this also with Async and wait.
 
