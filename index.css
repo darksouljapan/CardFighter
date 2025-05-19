@@ -1,22 +1,43 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-image: url("img/table.png");
+    background: url("img/bg1.jpg"), #2a2d35;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    font-family: "Exo 2", sans-serif;
+    font-family: "Funnel Sans", sans-serif;
     height: 100vh;
 }
+
+
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     color: white;
     height: 100vh;
+    text-align: center;
+}
+
+.playarea {
+
+    background: linear-gradient(0deg, rgb(11, 46, 1), rgba(70, 201, 31, 0.4)), url(/noise.svg);
+    padding: 1rem 1.5rem;
+    width: 400px;
+    /* height: 550px; */
+    border-radius: 1rem;
+    border: 0.5rem solid rgba(245, 245, 245, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
+    margin-top: 2rem;
     background-color: #FFF100;
     cursor: pointer;
     border: none;
@@ -27,21 +48,30 @@ button#new-deck {
     padding: 6px 32px;
     margin-bottom: 0.5em;
     line-height: 32px;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 button.draw {
-    font-size: 1.2em;
-    padding: 5px;
-    position: fixed;
+    font-size: 1.5em;
+    padding: 0.6rem;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
+    font-weight: 700;
+}
+
+#header {
+
+    font-size: 2rem;
 }
 
 div.card-slot {
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 120px;
-    width: calc(120px * 5 / 7);
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 200px;
+    width: calc(200px * 5 / 7);
 }
 
 div.card-slot:nth-of-type(1) {
@@ -66,6 +96,19 @@ div.top > p {
 
 button:disabled {
     cursor: not-allowed;
+}
+
+#remaining {
+
+    transform: translate(0px, 100px);
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+#computer-score, #player-score {
+
+    font-size: 1.2rem;
 }
 
 /* CONFETTE ANIMATION STARTS HERE */
